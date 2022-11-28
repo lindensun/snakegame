@@ -62,14 +62,14 @@ class Snake(object):
 
         # 뱀이 자기 몸통에 닿았을 경우 뱀 처음부터 다시 생성
         if new in self.positions[2:]:
-            #font_path = resource_path("assets/Vol_2 Sound Pack_23.wav")
-            playsound('C:/Users/USER/Documents/Introduction to visual media programming/snake_game/assets/Vol_2 Sound Pack_23.wav')
+            sound_path = resource_path("assets/Vol_2 Sound Pack_23.wav")
+            playsound(sound_path)
             self.create()
         # 뱀이 게임화면을 넘어갈 경우 뱀 처음부터 다시 생성
         elif new[0] < 0 or new[0] >= SCREEN_WIDTH or \
                 new[1] < 0 or new[1] >= SCREEN_HEIGHT:
-            #font_path = resource_path("assets/Vol_2 Sound Pack_23.wav")
-            playsound('C:/Users/USER/Documents/Introduction to visual media programming/snake_game/assets/Vol_2 Sound Pack_23.wav')
+            sound_path = resource_path("assets/Vol_2 Sound Pack_23.wav")
+            playsound(sound_path)
             self.create()
         # 뱀이 정상적으로 이동하는 경우
         else:
@@ -80,8 +80,8 @@ class Snake(object):
     # 뱀이 먹이를 먹을 때 호출
     def eat(self):
         self.length += 1
-        #font_path = resource_path("assets/Vol_2 Sound Pack_11.wav")
-        playsound('C:/Users/USER/Documents/Introduction to visual media programming/snake_game/assets/Vol_2 Sound Pack_11.wav')
+        sound_path = resource_path("assets/Vol_2 Sound Pack_11.wav")
+        playsound(sound_path)
 
 
     # 뱀 그리기
